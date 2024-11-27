@@ -27,10 +27,13 @@ app.use(express.json());
 const userRoutes = require("./routes/userRoutes");
 const bookingRoutes = require("./routes/bookingRoutes");
 const adminRoutes = require("./routes/adminRoutes");
+const logoutRoute = require("./routes/logout"); 
+
 
 app.use("/api/users", userRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/auth", logoutRoute); 
 
 app.get("/", (req, res) => {
   res.send("Logistics Platform API");
