@@ -24,7 +24,7 @@ app.use(
 app.use(express.json());
 
 //routes
-const userRoutes = require("./routes/userRoutes");
+const userRoutes = require("./routes/UserRoutes");
 const bookingRoutes = require("./routes/bookingRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const logoutRoute = require("./routes/logout"); 
