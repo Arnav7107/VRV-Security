@@ -24,10 +24,10 @@ app.use(
 app.use(express.json());
 
 //routes
-const userRoutes = require("./routes/UserRoutes");
-const bookingRoutes = require("./routes/bookingRoutes");
-const adminRoutes = require("./routes/adminRoutes");
-const logoutRoute = require("./routes/logout"); 
+const userRoutes = require("./Routes/UserRoutes");
+const bookingRoutes = require("./Routes/bookingRoutes");
+const adminRoutes = require("./Routes/adminRoutes");
+const logoutRoute = require("./Routes/logout"); 
 
 
 app.use("/api/users", userRoutes);
