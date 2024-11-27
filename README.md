@@ -33,7 +33,6 @@ For detailed information on available endpoints and how to use them, refer to th
     ```
 4. Create a `.env` file and add necessary environment variables:
     ```plaintext
-    PORT=5000
     DATABASE_URL=your_database_url
     JWT_SECRET=your_secret_key
     ```
