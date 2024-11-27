@@ -36,7 +36,63 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/auth", logoutRoute); 
 
 app.get("/", (req, res) => {
-  res.send("Logistics Platform API");
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Logistics Platform API</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+        }
+        header {
+          background-color: #333;
+          color: white;
+          padding: 20px;
+          text-align: center;
+        }
+        .container {
+          margin: 20px;
+        }
+        a {
+          text-decoration: none;
+          color: #333;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        a:hover {
+          color: #007BFF;
+        }
+        footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 10px;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1>Welcome to the Logistics Platform API</h1>
+      </header>
+      <div class="container">
+        <p>Welcome to the Logistics Platform API. Click below to access the API documentation:</p>
+        <a href="https://documenter.getpostman.com/view/25963454/2sAYBVjCSk">API Documentation</a>
+      </div>
+      <footer>
+        <p>&copy; 2024 Logistics Platform</p>
+      </footer>
+    </body>
+    </html>
+  `);
 });
 
 app.use((err, req, res, next) => {
